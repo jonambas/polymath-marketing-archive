@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(window).scroll($.throttle( 150, function(){
+	$(window).scroll($.throttle( 80, function(){
 		slideIn();
 	}));
 });
