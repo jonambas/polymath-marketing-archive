@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'museo_sans';
+    src: url('../fonts/exljbris_-_museosans-100-webfont.eot');
+    src: url('../fonts/exljbris_-_museosans-100-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/exljbris_-_museosans-100-webfont.woff2') format('woff2'),
+         url('../fonts/exljbris_-_museosans-100-webfont.woff') format('woff'),
+         url('../fonts/exljbris_-_museosans-100-webfont.ttf') format('truetype'),
+         url('../fonts/exljbris_-_museosans-100-webfont.svg#museo_sans100') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans';
+    src: url('../fonts/exljbris_-_museosans-300-webfont.eot');
+    src: url('../fonts/exljbris_-_museosans-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/exljbris_-_museosans-300-webfont.woff2') format('woff2'),
+         url('../fonts/exljbris_-_museosans-300-webfont.woff') format('woff'),
+         url('../fonts/exljbris_-_museosans-300-webfont.ttf') format('truetype'),
+         url('../fonts/exljbris_-_museosans-300-webfont.svg#museo_sans300') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans';
+    src: url('../fonts/exljbris_-_museosans-500-webfont.eot');
+    src: url('../fonts/exljbris_-_museosans-500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/exljbris_-_museosans-500-webfont.woff2') format('woff2'),
+         url('../fonts/exljbris_-_museosans-500-webfont.woff') format('woff'),
+         url('../fonts/exljbris_-_museosans-500-webfont.ttf') format('truetype'),
+         url('../fonts/exljbris_-_museosans-500-webfont.svg#museo_sans500') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans';
+    src: url('../fonts/exljbris_-_museosans-700-webfont.eot');
+    src: url('../fonts/exljbris_-_museosans-700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/exljbris_-_museosans-700-webfont.woff2') format('woff2'),
+         url('../fonts/exljbris_-_museosans-700-webfont.woff') format('woff'),
+         url('../fonts/exljbris_-_museosans-700-webfont.ttf') format('truetype'),
+         url('../fonts/exljbris_-_museosans-700-webfont.svg#museo_sans700') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$museo: 'museo_sans', serif;
+
+html {
+  color: color(black);
+  font-size: $base-font-size + 0px;
+}
+
+body {
+  line-height: 1.8em;
+  @include font($museo, $base-font-size, 300);
+}
+
+::selection {
+  color: #111;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+
+%header {
+  margin-top: 0;
+  margin-bottom: base(1);
+  color:  color(black);
+  line-height: 1.1em;
+  @include font($museo, 16, 100);
+  &::selection{
+    //color: #000;
+  }
+}
+
+//Header Sizing
+
+@each $header, $size in $headers {
+  #{$header} {
+    @extend %header;
+    @include font-size($size);
+  }
+}
