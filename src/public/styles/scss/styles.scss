@@ -96,7 +96,7 @@ html {
     height: 100%;
     z-index: 2;
 
-    background: radial-gradient(rgba(#4a4a4a, 0.6), rgba(color(black), 0.7));
+    background: radial-gradient(rgba(#2a2a2a, 0.8), rgba(color(black), 0.7));
     opacity: 0.6;
     transition: 0.5s;
   }
@@ -146,6 +146,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 110%;
     z-index: 1;
 
     backface-visibility: hidden;
