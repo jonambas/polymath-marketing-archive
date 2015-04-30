@@ -172,3 +172,45 @@ html {
   }
 }
 
+//Footer
+.c-footer {
+  text-align: center;
+  
+
+  .o-container {
+    border-top: 1px solid rgba(color(black), 0.14);
+    padding: base(4) 0;
+  }
+
+  @at-root #{&}__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @at-root #{&}__item {
+    display: inline-block;
+    margin-right: -4px;
+    padding: 0 base(0.5);
+  }
+
+  @at-root #{&}__svg {
+    width: base(1.5);
+    height: base(1.5);
+    fill: rgba(color(black), 0.5);
+    transition: 0.2s;
+  }
+
+  @at-root #{&}__link {
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+      .c-footer__svg {
+        fill: rgba(color(blue), 0.8);
+      }
+    }
+  }
+
+  
+}
+

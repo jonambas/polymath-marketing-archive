@@ -1635,3 +1635,34 @@ html {
 .o-project:hover:after, .o-project:active:after, .o-project:focus:after {
   opacity: 1;
 }
+
+.c-footer {
+  text-align: center;
+}
+.c-footer .o-container {
+  border-top: 1px solid rgba(35, 31, 32, 0.14);
+  padding: 64px 0;
+}
+.c-footer__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.c-footer__item {
+  display: inline-block;
+  margin-right: -4px;
+  padding: 0 8px;
+}
+.c-footer__svg {
+  width: 24px;
+  height: 24px;
+  fill: rgba(35, 31, 32, 0.5);
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+.c-footer__link {
+  text-decoration: none;
+}
+.c-footer__link:hover .c-footer__svg, .c-footer__link:active .c-footer__svg, .c-footer__link:focus .c-footer__svg {
+  fill: rgba(40, 168, 224, 0.8);
+}

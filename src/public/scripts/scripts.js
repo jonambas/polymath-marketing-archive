@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $("img").unveil(200);
+    
 	$(window).scroll($.throttle( 80, function(){
 		slideIn();
 	}));
